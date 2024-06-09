@@ -11,7 +11,7 @@ import {
     useToast
 } from "@chakra-ui/react";
 
-export const CourseReviewForm = () => {
+export const CourseForm = () => {
     const toast = useToast();
     const [formData, setFormData] = useState({
         name: "",
