@@ -7,9 +7,6 @@ WORKDIR /usr/src/app
 # Copy the current directory contents into the container at /usr/src/app
 COPY . .
 
-# Install build tools
-RUN apt-get update && apt-get install -y build-essential
-
 # Install any needed packages specified in package.json
 RUN npm install -g npm@latest && npm cache clean --force && npm install
 
