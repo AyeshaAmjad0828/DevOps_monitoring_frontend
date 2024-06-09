@@ -8,6 +8,7 @@ import {
     Box,
     Container,
     Heading,
+    Select,
     useToast
 } from "@chakra-ui/react";
 
@@ -98,15 +99,18 @@ export const CourseForm = () => {
                     </FormControl>
                     <FormControl id="rating" mb={4}>
                         <FormLabel>Rating</FormLabel>
-                        <Input
-                            type="number"
+                        <Select
                             name="rating"
                             value={formData.rating}
                             onChange={handleInputChange}
-                            placeholder="Rate the course out of 5"
-                            min={1}
-                            max={5}
-                        />
+                            placeholder="Rate the course"
+                        >
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </Select>
                     </FormControl>
                     <FormControl id="assignments" mb={4}>
                         <FormLabel>Number of Assignments</FormLabel>
