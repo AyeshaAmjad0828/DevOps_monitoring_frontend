@@ -17,4 +17,4 @@ RUN npm install -g npm@latest && npm cache clean --force && npm install
 EXPOSE 4000
 
 # Run the app when the container launches
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev", "--", "--host"]
